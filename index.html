@@ -18,8 +18,6 @@
         h1, h2, h3 {
             font-family: 'Fredoka', sans-serif;
         }
-        .bg-pastel-yellow { background-color: #FEF9C3; }
-        .bg-pastel-green { background-color: #DCFCE7; }
         .btn-primary { 
             background-color: #EA580C;
             transition: all 0.3s ease;
@@ -31,73 +29,77 @@
         .menu-card {
             transition: all 0.3s ease;
         }
-        .menu-card:hover {
-            transform: translateY(-5px);
+        @media (min-width: 768px) {
+            .menu-card:hover {
+                transform: translateY(-5px);
+            }
         }
         .early-badge {
             background: linear-gradient(90deg, #F59E0B, #EA580C);
         }
     </style>
 </head>
-<body class="bg-orange-50 text-gray-800">
+<body class="bg-orange-50 text-gray-800 overflow-x-hidden">
 
+    <!-- Navegación -->
     <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <div class="bg-orange-500 p-2 rounded-full shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="bg-orange-500 p-1.5 rounded-full shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                 </div>
-                <span class="text-xl font-bold text-orange-600 tracking-tight text-nowrap">Loncheritas con Amor</span>
+                <span class="text-lg md:text-xl font-bold text-orange-600 tracking-tight whitespace-nowrap">Loncheritas con Amor</span>
             </div>
-            <div class="hidden md:flex space-x-6 font-semibold">
+            <div class="hidden lg:flex space-x-6 font-semibold">
                 <a href="#menu" class="hover:text-orange-500 transition">Menús</a>
                 <a href="#como-funciona" class="hover:text-orange-500 transition">Logística</a>
                 <a href="#precios" class="hover:text-orange-500 transition">Planes</a>
                 <a href="terminos.html" class="hover:text-orange-500 transition border-l pl-6 border-orange-100">Términos</a>
             </div>
-            <a href="https://wa.me/51930665123?text=Hola!%20Quisiera%20pedir%20información%20sobre%20las%20loncheritas%20saludables." class="btn-primary text-white px-5 py-2 rounded-full font-bold shadow-lg text-sm text-nowrap">Pedir ahora</a>
+            <a href="https://wa.me/51930665123?text=Hola!%20Quisiera%20pedir%20información%20sobre%20las%20loncheritas%20saludables." class="btn-primary text-white px-4 py-2 rounded-full font-bold shadow-lg text-xs md:text-sm whitespace-nowrap">Pedir ahora</a>
         </div>
     </nav>
 
-    <section id="inicio" class="relative py-12 md:py-20 px-4">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 text-center md:text-left">
-                <div class="early-badge inline-block text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg mb-4">
+    <!-- Hero Section -->
+    <section id="inicio" class="relative py-8 md:py-20 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <div class="early-badge inline-block text-white px-4 py-1 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest shadow-lg mb-4">
                     🚀 Entregas desde las 5:00 AM
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold mt-2 leading-tight font-fredoka">Loncheras ricas, sanas y <span class="text-orange-500">sin estrés</span></h1>
-                <p class="mt-6 text-xl text-gray-600 leading-relaxed font-medium">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mt-2 leading-tight">Loncheras ricas, sanas y <span class="text-orange-500">sin estrés</span></h1>
+                <p class="mt-4 md:mt-6 text-base md:text-xl text-gray-600 leading-relaxed font-medium">
                     Nutrición equilibrada estilo "Mama Limonada" para todas las edades. Tú descansas, nosotros cocinamos con amor de vecina.
                 </p>
-                <div class="mt-4 p-4 bg-orange-100 rounded-2xl inline-block border-2 border-dashed border-orange-300">
-                    <p class="text-orange-700 font-bold text-lg">✨ ¡Aprovecha esta preventa exclusiva para vecinos! ✨</p>
+                <div class="mt-6 p-4 bg-orange-100 rounded-2xl inline-block border-2 border-dashed border-orange-300 w-full md:w-auto">
+                    <p class="text-orange-700 font-bold text-base md:text-lg">✨ ¡Aprovecha esta preventa exclusiva! ✨</p>
                 </div>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#menu" class="btn-primary text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl text-center">Ver Menú Semanal</a>
-                    <a href="#precios" class="bg-white text-orange-600 border-2 border-orange-600 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-orange-50 transition text-center">Ver Planes</a>
+                    <a href="#menu" class="btn-primary text-white px-8 py-3 md:py-4 rounded-2xl font-bold text-base md:text-lg shadow-xl text-center">Ver Menú Semanal</a>
+                    <a href="#precios" class="bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 md:py-4 rounded-2xl font-bold text-base md:text-lg hover:bg-orange-50 transition text-center">Ver Planes</a>
                 </div>
             </div>
-            <div class="md:w-1/2">
-                <div class="relative bg-white p-4 rounded-[3rem] shadow-2xl rotate-2">
-                    <img src="imagen.jpg" alt="Loncheritas Saludables" class="rounded-[2.5rem] w-full object-cover h-[400px]">
-                    <div class="absolute -bottom-6 -right-6 bg-yellow-400 text-orange-900 p-6 rounded-3xl shadow-xl font-bold -rotate-3">
-                        <p class="text-2xl font-black uppercase tracking-tighter">Comida Casera</p>
+            <div class="w-full md:w-1/2 mt-8 md:mt-0">
+                <div class="relative bg-white p-3 md:p-4 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl rotate-2 max-w-sm mx-auto md:max-w-none">
+                    <img src="imagen.jpg" alt="Loncheritas Saludables" class="rounded-[2rem] md:rounded-[2.5rem] w-full object-cover h-[300px] md:h-[400px]">
+                    <div class="absolute -bottom-4 -right-4 bg-yellow-400 text-orange-900 p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-xl font-bold -rotate-3">
+                        <p class="text-lg md:text-2xl font-black uppercase tracking-tighter">Comida Casera</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Programación de la Semana (Imagen de referencia aplicada) -->
-    <section id="menu" class="py-20 bg-orange-50">
+    <!-- Programación de la Semana -->
+    <section id="menu" class="py-12 md:py-20 bg-orange-50">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-gray-800 font-fredoka tracking-tight">Programación de la Semana</h2>
+            <h2 class="text-3xl md:text-5xl font-bold mb-8 md:mb-12 text-gray-800 tracking-tight">Programación de la Semana</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
                 <!-- Lunes -->
-                <div class="bg-white p-5 rounded-[2.5rem] shadow-lg border-t-8 border-orange-500 menu-card text-left">
+                <div class="bg-white p-5 rounded-[2rem] shadow-lg border-t-8 border-orange-500 menu-card text-left">
                     <p class="font-black text-orange-500 text-xs mb-4 uppercase tracking-widest text-center">Lunes</p>
                     <div class="space-y-6">
                         <div class="bg-orange-50 p-4 rounded-2xl">
@@ -122,7 +124,7 @@
                 </div>
 
                 <!-- Martes -->
-                <div class="bg-white p-5 rounded-[2.5rem] shadow-lg border-t-8 border-yellow-400 menu-card text-left">
+                <div class="bg-white p-5 rounded-[2rem] shadow-lg border-t-8 border-yellow-400 menu-card text-left">
                     <p class="font-black text-yellow-500 text-xs mb-4 uppercase tracking-widest text-center">Martes</p>
                     <div class="space-y-6">
                         <div class="bg-yellow-50 p-4 rounded-2xl">
@@ -147,7 +149,7 @@
                 </div>
 
                 <!-- Miércoles -->
-                <div class="bg-white p-5 rounded-[2.5rem] shadow-lg border-t-8 border-green-500 menu-card text-left">
+                <div class="bg-white p-5 rounded-[2rem] shadow-lg border-t-8 border-green-500 menu-card text-left">
                     <p class="font-black text-green-500 text-xs mb-4 uppercase tracking-widest text-center">Miércoles</p>
                     <div class="space-y-6">
                         <div class="bg-green-50 p-4 rounded-2xl">
@@ -172,7 +174,7 @@
                 </div>
 
                 <!-- Jueves -->
-                <div class="bg-white p-5 rounded-[2.5rem] shadow-lg border-t-8 border-blue-500 menu-card text-left">
+                <div class="bg-white p-5 rounded-[2rem] shadow-lg border-t-8 border-blue-500 menu-card text-left">
                     <p class="font-black text-blue-500 text-xs mb-4 uppercase tracking-widest text-center">Jueves</p>
                     <div class="space-y-6">
                         <div class="bg-blue-50 p-4 rounded-2xl">
@@ -197,7 +199,7 @@
                 </div>
 
                 <!-- Viernes -->
-                <div class="bg-white p-5 rounded-[2.5rem] shadow-lg border-t-8 border-pink-500 menu-card text-left">
+                <div class="bg-white p-5 rounded-[2rem] shadow-lg border-t-8 border-pink-500 menu-card text-left">
                     <p class="font-black text-pink-500 text-xs mb-4 uppercase tracking-widest text-center">Viernes</p>
                     <div class="space-y-6">
                         <div class="bg-pink-50 p-4 rounded-2xl">
@@ -225,95 +227,113 @@
     </section>
 
     <!-- Logística -->
-    <section id="como-funciona" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12 text-gray-800 tracking-tight font-fredoka">Logística del Condominio 🌙</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 bg-orange-50 rounded-[2.5rem] border-2 border-transparent hover:border-orange-100 transition">
-                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-sm">🎒</div>
-                    <h4 class="text-orange-600 font-bold uppercase text-xs mb-3 tracking-widest text-nowrap">Desde las 8:00 PM</h4>
-                    <h3 class="font-bold text-lg mb-2">Recojo de Lonchera</h3>
-                    <p class="text-gray-500 text-sm font-medium">Me dejas tu lonchera vacía en mi puerta la noche anterior previo aviso.</p>
+    <section id="como-funciona" class="py-12 md:py-20 bg-white px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-800 tracking-tight">Logística Nocturna 🌙</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="p-6 md:p-8 bg-orange-50 rounded-[2rem]">
+                    <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-sm">🎒</div>
+                    <h4 class="text-orange-600 font-bold uppercase text-[10px] mb-2 tracking-widest">Desde las 8:00 PM</h4>
+                    <h3 class="font-bold text-base md:text-lg mb-2">Recojo de Lonchera</h3>
+                    <p class="text-gray-500 text-xs md:text-sm font-medium">Me dejas tu lonchera vacía en mi puerta la noche anterior previo aviso.</p>
                 </div>
-                <div class="p-8 bg-orange-100 rounded-[2.5rem] border-2 border-orange-200 shadow-xl scale-105">
-                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-sm">🏠</div>
-                    <h4 class="text-orange-800 font-bold uppercase text-xs mb-3 tracking-widest text-nowrap">Desde las 5:00 AM</h4>
-                    <h3 class="font-bold text-lg mb-2">¡Listas en tu puerta!</h3>
-                    <p class="text-orange-900 font-bold text-sm">Entrega garantizada para que salgas sin retrasos.</p>
+                <div class="p-6 md:p-8 bg-orange-100 rounded-[2rem] border-2 border-orange-200 shadow-lg">
+                    <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-sm">🏠</div>
+                    <h4 class="text-orange-800 font-bold uppercase text-[10px] mb-2 tracking-widest">Desde las 5:00 AM</h4>
+                    <h3 class="font-bold text-base md:text-lg mb-2">¡Listas en tu puerta!</h3>
+                    <p class="text-orange-900 font-bold text-xs md:text-sm">Entrega puntual para que salgas sin retrasos.</p>
                 </div>
-                <div class="p-8 bg-green-50 rounded-[2.5rem] border-2 border-transparent hover:border-green-100 transition">
-                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-sm">✨</div>
-                    <h4 class="text-green-600 font-bold uppercase text-xs mb-3 tracking-widest text-nowrap">Gana Tiempo</h4>
-                    <h3 class="font-bold text-lg mb-2">Cero Estrés</h3>
-                    <p class="text-gray-600 text-sm font-medium">Tus hijos bien alimentados y tú con más tiempo libre.</p>
+                <div class="p-6 md:p-8 bg-green-50 rounded-[2rem]">
+                    <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-sm">✨</div>
+                    <h4 class="text-green-600 font-bold uppercase text-[10px] mb-2 tracking-widest">Gana Tiempo</h4>
+                    <h3 class="font-bold text-base md:text-lg mb-2">Cero Estrés</h3>
+                    <p class="text-gray-600 text-xs md:text-sm font-medium">Tus hijos bien alimentados y tú con más tiempo libre.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Planes con Preventa -->
-    <section id="precios" class="py-20 bg-orange-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 font-fredoka">Planes por Suscripción</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <!-- Planes -->
+    <section id="precios" class="py-12 md:py-20 bg-orange-50 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-800">Planes por Suscripción</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center max-w-lg md:max-w-none mx-auto">
                 
                 <!-- Día Suelto -->
-                <div class="bg-white p-8 rounded-[3rem] border-2 border-transparent hover:border-orange-200 shadow-md text-center">
-                    <h3 class="font-bold text-xl mb-1 text-orange-600">Día Suelto</h3>
+                <div class="bg-white p-8 rounded-[2.5rem] border-2 border-transparent hover:border-orange-200 shadow-md text-center">
+                    <h3 class="font-bold text-lg mb-1 text-orange-600">Día Suelto</h3>
                     <p class="text-gray-400 text-[10px] mb-4 font-bold uppercase tracking-widest">Para probar</p>
-                    <div class="mb-8 flex flex-col items-center">
-                        <span class="text-gray-400 line-through text-lg font-bold italic mb-1">S/ 15.00</span>
-                        <span class="text-5xl font-black text-gray-800">S/ 12.00</span>
+                    <div class="mb-6 flex flex-col items-center">
+                        <span class="text-gray-400 line-through text-base font-bold italic">S/ 15.00</span>
+                        <span class="text-4xl md:text-5xl font-black text-gray-800">S/ 13.50</span>
                     </div>
-                    <ul class="text-sm space-y-3 mb-8 text-gray-600 font-bold">
+                    <ul class="text-xs space-y-3 mb-6 text-gray-600 font-bold">
                         <li>✅ Lonchera completa</li>
                         <li>✅ Entrega puntual</li>
+                        <li>
+                            🧠 Detalle educativo incluido
+                            <p class="text-[9px] text-gray-400 font-medium normal-case tracking-normal">Pequeña tarjeta con el enfoque nutricional del día.</p>
+                        </li>
                     </ul>
-                    <a href="https://wa.me/51930665123?text=Hola!%20Deseo%20probar%20un%20*Día%20Suelto*%20en%20preventa%20S/12." class="block py-4 border-2 border-orange-600 text-orange-600 rounded-2xl font-bold hover:bg-orange-50 transition">Pedir hoy</a>
+                    <a href="https://wa.me/51930665123?text=Hola!%20Deseo%20probar%20un%20*Día%20Suelto*%20de%20S/13.50." class="block py-3 border-2 border-orange-600 text-orange-600 rounded-xl font-bold hover:bg-orange-50 transition">Pedir hoy</a>
                 </div>
 
                 <!-- Plan Mensual -->
-                <div class="bg-white p-8 rounded-[3rem] shadow-2xl border-4 border-yellow-400 relative transform md:scale-110 z-10 text-center">
-                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-yellow-400 text-orange-900 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter shadow-md animate-bounce">🔥 ¡Mejor Oferta!</div>
-                    <h3 class="font-bold text-xl mb-1 text-orange-600 uppercase font-fredoka">Plan Mensual</h3>
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border-4 border-yellow-400 relative md:scale-105 z-10 text-center order-first lg:order-none">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-orange-900 px-4 py-1 rounded-full text-[9px] font-black uppercase tracking-tighter shadow-md">🔥 ¡Mejor Oferta!</div>
+                    <h3 class="font-bold text-xl mb-1 text-orange-600 uppercase">Plan Mensual</h3>
                     <p class="text-gray-400 text-[10px] mb-4 font-bold uppercase tracking-widest italic">Accesorios Incluidos</p>
-                    <div class="mb-8 flex flex-col items-center">
-                        <span class="text-gray-400 line-through text-lg font-bold italic mb-1">S/ 280.00</span>
-                        <span class="text-5xl font-black text-orange-600">S/ 185.00</span>
+                    <div class="mb-6 flex flex-col items-center">
+                        <span class="text-gray-400 line-through text-base font-bold italic">S/ 280.00</span>
+                        <span class="text-4xl md:text-5xl font-black text-orange-600">S/ 195.50</span>
                     </div>
-                    <ul class="text-sm space-y-3 mb-8 text-gray-600 font-bold font-fredoka">
+                    <ul class="text-xs space-y-3 mb-6 text-gray-600 font-bold uppercase">
                         <li>🎁 Kit de Bienvenida GRATIS</li>
-                        <li>✅ Ahorro máximo asegurado</li>
+                        <li>⭐ Sticker semanal</li>
+                        <li>✨ Sorpresa mensual</li>
+                        <li>
+                            🧠 Detalle educativo incluido
+                            <p class="text-[9px] text-gray-400 font-medium normal-case tracking-normal">Pequeña tarjeta con el enfoque nutricional del día.</p>
+                        </li>
                     </ul>
-                    <a href="https://wa.me/51930665123?text=Hola!%20Deseo%20el%20*Plan%20Mensual*%20en%20preventa%20S/185." class="block py-4 btn-primary text-white rounded-2xl font-bold shadow-lg uppercase">Suscribirme</a>
+                    <a href="https://wa.me/51930665123?text=Hola!%20Deseo%20el%20*Plan%20Mensual*%20de%20S/195.50." class="block py-4 btn-primary text-white rounded-xl font-bold shadow-lg uppercase text-sm">Suscribirme</a>
                 </div>
 
                 <!-- Plan Semanal -->
-                <div class="bg-white p-8 rounded-[3rem] border-2 border-transparent hover:border-orange-200 shadow-md text-center">
-                    <h3 class="font-bold text-xl mb-1 text-orange-600">Plan Semanal</h3>
+                <div class="bg-white p-8 rounded-[2.5rem] border-2 border-transparent hover:border-orange-200 shadow-md text-center">
+                    <h3 class="font-bold text-lg mb-1 text-orange-600">Plan Semanal</h3>
                     <p class="text-gray-400 text-[10px] mb-4 font-bold uppercase tracking-widest">Lunes a Viernes</p>
-                    <div class="mb-8 flex flex-col items-center">
-                        <span class="text-gray-400 line-through text-lg font-bold italic mb-1">S/ 75.00</span>
-                        <span class="text-5xl font-black text-gray-800">S/ 50.00</span>
+                    <div class="mb-6 flex flex-col items-center">
+                        <span class="text-gray-400 line-through text-base font-bold italic">S/ 75.00</span>
+                        <span class="text-4xl md:text-5xl font-black text-gray-800">S/ 60.00</span>
                     </div>
-                    <ul class="text-sm space-y-3 mb-8 text-gray-600 font-bold">
-                        <li>✅ S/ 10.00 por día</li>
-                        <li>✅ Variedad garantizada</li>
+                    <ul class="text-xs space-y-3 mb-6 text-gray-600 font-bold">
+                        <li>✅ S/ 12.00 por día</li>
+                        <li>⭐ Sticker semanal</li>
+                        <li>
+                            🧠 Detalle educativo incluido
+                            <p class="text-[9px] text-gray-400 font-medium normal-case tracking-normal">Pequeña tarjeta con el enfoque nutricional del día.</p>
+                        </li>
                     </ul>
-                    <a href="https://wa.me/51930665123?text=Hola!%20Deseo%20el%20*Plan%20Semanal*%20en%20preventa%20S/50." class="block py-4 bg-white text-orange-600 border-2 border-orange-600 rounded-2xl font-bold hover:bg-orange-50 transition">Suscribirme</a>
+                    <a href="https://wa.me/51930665123?text=Hola!%20Deseo%20el%20*Plan%20Semanal*%20de%20S/60.00." class="block py-3 bg-white text-orange-600 border-2 border-orange-600 rounded-xl font-bold hover:bg-orange-50 transition">Suscribirme</a>
                 </div>
             </div>
-            <p class="text-center mt-12 text-gray-400 text-[9px] font-bold uppercase tracking-widest leading-relaxed italic">* Usamos los envases de cada niño para reducir costos y cuidar el planeta.</p>
+            
+            <!-- FRASE CON ESTILO ORIGINAL -->
+            <p class="text-center mt-12 text-gray-400 text-[9px] md:text-[10px] font-bold uppercase tracking-widest leading-relaxed italic px-4">
+                * Usamos los envases de cada niño para reducir costos y cuidar el planeta. <br class="hidden md:block">
+                De no presentarse la lonchera, se usará un envase de "Loncheritas con Amor" con un costo adicional de S/ 2.00 por ocasión.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-12 border-t border-orange-100 text-center">
-        <h3 class="text-2xl font-bold text-orange-600 mb-2 font-fredoka">Loncheritas con Amor</h3>
-        <p class="text-gray-500 text-sm font-medium mb-6 tracking-tight px-4 italic">"Tus hijos bien alimentados y tú con más tiempo libre "</p>
-        <div class="flex justify-center space-x-6 text-gray-400 font-bold text-[11px] uppercase tracking-widest">
+    <footer class="bg-white py-12 border-t border-orange-100 text-center px-4">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-600 mb-2 font-fredoka">Loncheritas con Amor</h3>
+        <p class="text-gray-500 text-sm font-medium mb-6 italic">"Tus hijos bien alimentados y tú con más tiempo libre "</p>
+        <div class="flex flex-wrap justify-center gap-4 text-gray-400 font-bold text-[10px] uppercase tracking-widest">
             <a href="https://wa.me/51930665123" class="hover:text-green-600 transition">WhatsApp</a>
-            <a href="terminos.html" class="hover:text-orange-600 transition font-fredoka">Términos y Condiciones</a>
+            <a href="terminos.html" class="hover:text-orange-600 transition">Términos y Condiciones</a>
         </div>
         <p class="mt-6 text-[9px] text-gray-300">© 2024 Loncheritas con Amor | Servicio para el Condominio</p>
     </footer>
