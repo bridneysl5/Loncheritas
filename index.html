@@ -37,6 +37,11 @@
         .early-badge {
             background: linear-gradient(90deg, #F59E0B, #EA580C);
         }
+        /* Ajuste para la proporción solicitada 1080x1350 (4:5) */
+        .img-ratio-custom {
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body class="bg-orange-50 text-gray-800 overflow-x-hidden">
@@ -83,7 +88,7 @@
             </div>
             <div class="w-full md:w-1/2 mt-8 md:mt-0">
                 <div class="relative bg-white p-3 md:p-4 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl rotate-2 max-w-sm mx-auto md:max-w-none">
-                    <img src="imagen.jpg" alt="Loncheritas Saludables" class="rounded-[2rem] md:rounded-[2.5rem] w-full object-cover h-[300px] md:h-[400px]">
+                    <img src="imagen.jpg" alt="Loncheritas Saludables" class="rounded-[2rem] md:rounded-[2.5rem] w-full img-ratio-custom">
                     <div class="absolute -bottom-4 -right-4 bg-yellow-400 text-orange-900 p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-xl font-bold -rotate-3">
                         <p class="text-lg md:text-2xl font-black uppercase tracking-tighter">Comida Casera</p>
                     </div>
@@ -235,7 +240,7 @@
                     <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-sm">🎒</div>
                     <h4 class="text-orange-600 font-bold uppercase text-[10px] mb-2 tracking-widest">Desde las 8:00 PM</h4>
                     <h3 class="font-bold text-base md:text-lg mb-2">Recojo de Lonchera</h3>
-                    <p class="text-gray-500 text-xs md:text-sm font-medium">Me dejas tu lonchera vacía en mi puerta la noche anterior previo aviso.</p>
+                    <p class="text-gray-500 text-xs md:text-sm font-medium">Recogemos tu lonchera vacía  la noche anterior previo aviso.</p>
                 </div>
                 <div class="p-6 md:p-8 bg-orange-100 rounded-[2rem] border-2 border-orange-200 shadow-lg">
                     <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-sm">🏠</div>
@@ -282,15 +287,14 @@
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border-4 border-yellow-400 relative md:scale-105 z-10 text-center order-first lg:order-none">
                     <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-orange-900 px-4 py-1 rounded-full text-[9px] font-black uppercase tracking-tighter shadow-md">🔥 ¡Mejor Oferta!</div>
                     <h3 class="font-bold text-xl mb-1 text-orange-600 uppercase">Plan Mensual</h3>
-                    <p class="text-gray-400 text-[10px] mb-4 font-bold uppercase tracking-widest italic">Accesorios Incluidos</p>
+                    <p class="text-gray-400 text-[10px] mb-4 font-bold uppercase tracking-widest italic">20 Loncheras al mes</p>
                     <div class="mb-6 flex flex-col items-center">
-                        <span class="text-gray-400 line-through text-base font-bold italic">S/ 280.00</span>
+                        <span class="text-gray-400 line-through text-base font-bold italic">S/ 270.00</span>
                         <span class="text-4xl md:text-5xl font-black text-orange-600">S/ 195.50</span>
                     </div>
                     <ul class="text-xs space-y-3 mb-6 text-gray-600 font-bold uppercase">
                         <li>🎁 Kit de Bienvenida GRATIS</li>
                         <li>⭐ Sticker semanal</li>
-                        <li>✨ Sorpresa mensual</li>
                         <li>
                             🧠 Detalle educativo incluido
                             <p class="text-[9px] text-gray-400 font-medium normal-case tracking-normal">Pequeña tarjeta con el enfoque nutricional del día.</p>
@@ -302,7 +306,7 @@
                 <!-- Plan Semanal -->
                 <div class="bg-white p-8 rounded-[2.5rem] border-2 border-transparent hover:border-orange-200 shadow-md text-center">
                     <h3 class="font-bold text-lg mb-1 text-orange-600">Plan Semanal</h3>
-                    <p class="text-gray-400 text-[10px] mb-4 font-bold uppercase tracking-widest">Lunes a Viernes</p>
+                    <p class="text-gray-400 text-[10px] mb-4 font-bold uppercase tracking-widest">5 Loncheras por semana</p>
                     <div class="mb-6 flex flex-col items-center">
                         <span class="text-gray-400 line-through text-base font-bold italic">S/ 75.00</span>
                         <span class="text-4xl md:text-5xl font-black text-gray-800">S/ 60.00</span>
@@ -322,7 +326,7 @@
             <!-- FRASE CON ESTILO ORIGINAL -->
             <p class="text-center mt-12 text-gray-400 text-[9px] md:text-[10px] font-bold uppercase tracking-widest leading-relaxed italic px-4">
                 * Usamos los envases de cada niño para reducir costos y cuidar el planeta. <br class="hidden md:block">
-                De no presentarse la lonchera, se usará un envase de "Loncheritas con Amor" con un costo adicional de S/ 2.00 por ocasión.
+                De no presentarse la lonchera, se usará un envase de "Loncheritas con Amor" con un costo adicional de S/ 1.50 por ocasión.
             </p>
         </div>
     </section>
